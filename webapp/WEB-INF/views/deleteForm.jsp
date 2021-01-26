@@ -9,7 +9,7 @@
 	</head>
 	
 	<body>
-		<c:if test="${delResult == 0}"> <%-- ${requestScope.delResult == 0} -> ${delResult == 0} --%>
+		<c:if test="${param.delResult == 'fail'}"> <%-- ${requestScope.delResult == 0} -> ${delResult == 0} --%>
 			비밀번호를 잘 못 입력하셨습니다. 다시 입력해주세요.
 		</c:if>
 		

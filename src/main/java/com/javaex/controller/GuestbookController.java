@@ -53,8 +53,7 @@ public class GuestbookController {
 		int result = gbDao.delete(gbVo);
 
 		if(result == 0) {
-			model.addAttribute("delResult", result);
-			return "deleteForm";
+			return "redirect:/guestbook/deleteForm?no=" +gbVo.getNo()+ "&delResult=fail";
 		}else {
 			return "redirect:/guestbook/addList";
 		}
